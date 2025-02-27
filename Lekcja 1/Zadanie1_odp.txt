@@ -1,0 +1,10 @@
+1.  ?-na(d,c).		true
+2.  ?-na(c,a).		true
+3.  ?-na(b,c).		false (w oparciu o ten program nie można stwierdzić, że klocek b leży na klocku c)
+4.  ?-na(X,c).		X=d
+5.  ?-na(c,X).		X=a;	X=b (";" aby wyświetlić wiecej możliwości)
+6.  ?-na(X,Y).		X=c, Y=a;	X=c, Y=b;	X=d, Y=c
+7.  ?-na(_,c).		true
+8.  ?-na(c,_).		true; true
+9.  ?-na(X,c), na(c,Y).	X=d, Y=a
+10. ?-na(X,Y), na(Y,Z).	X=d, Y=c, Z=a;	X=d, Y=c, Z=b
